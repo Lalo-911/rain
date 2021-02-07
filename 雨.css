@@ -1,0 +1,46 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+section{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background:url(https://s3.ax1x.com/2021/02/08/yNIuUP.jpg);
+	background-size: cover;
+	/* background-attachment: fixed; */
+	animation: color-change 2s linear infinite ;
+}
+section:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:url(https://s3.ax1x.com/2021/02/08/yNILIP.png) ;
+	animation: rain 1.5s linear infinite;
+}
+@keyframes color-change
+{
+	0%,100%
+	{
+		filter: hue-rotate(0deg);
+	}
+	50%
+	{
+		filter: hue-rotate(110deg);
+	}
+}
+@keyframes rain
+{
+	0%
+	{
+		background-position: 0 0;
+	}
+	100%
+	{
+		background-position: 50% 100%;
+	}
+}
